@@ -10,7 +10,7 @@ const upload = multer({ storage }); // Allow up to 5 images
 
 router.get("/apply", isLoggedIn,  wrapAsync(applyController.apply)); // apply Route
 // router.post("/submit", isLoggedIn, upload.array("images", 5), wrapAsync(applyController.submitScholarship));
-// router.post("/apply",isLoggedIn, upload.array("listing[images]",5), validateListing, wrapAsync(applyController.apply));
+ // // router.post("/apply",isLoggedIn, upload.array("listing[images]",5), validateListing, wrapAsync(applyController.apply));
 
 router.post("/submitpersonaldetails", isLoggedIn, wrapAsync(applyController.submitpersonaldetails));
 router.post("/submitacedmicdetails", isLoggedIn, wrapAsync(applyController.submitacedmicdetails));
